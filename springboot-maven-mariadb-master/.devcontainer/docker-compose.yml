@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+
+    tty: true
+    stdin_open: true
+
+    network_mode: service:db
+
+    volumes:
+      - ..:/workspace:cached
+
+  db:
+    image: mariadb:latest
+    ports:
+    - '3306:3306'
+    restart: unless-stopped
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: mariadb
+      MYSQL_DATABASE: mariadb
+      MYSQL_USER: mariadb
+      MYSQL_PASSWORD: mariadb

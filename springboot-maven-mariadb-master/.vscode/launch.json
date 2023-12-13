@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "TemplateApplication",
+            "request": "launch",
+            "mainClass": "com.example.template.TemplateApplication",
+            "projectName": "template"
+        }
+    ]
+}

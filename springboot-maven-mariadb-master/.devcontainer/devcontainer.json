@@ -1,0 +1,58 @@
+{
+	"name": "Template",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"remoteEnv": {
+		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+	},
+	"forwardPorts": [
+		8080
+	],
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "true",
+			"installGradle": "false"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.formatOnSave": true,
+				"files.autoSave": "onFocusChange",
+				"debug.inlineValues": "on",
+				"debug.openDebug": "openOnSessionStart",
+				"debug.internalConsoleOptions": "openOnSessionStart",
+				"editor.dragAndDrop": false,
+				"editor.renderWhitespace": "all",
+				"editor.showFoldingControls": "always",
+				"editor.minimap.maxColumn": 40,
+				"editor.minimap.showSlider": "always",
+				"editor.minimap.size": "fit",
+				"editor.formatOnPaste": true,
+				"files.insertFinalNewline": true,
+				"files.eol": "\n",
+				"workbench.iconTheme": "material-icon-theme",
+				"java.compile.nullAnalysis.mode": "disabled",
+				"java.format.settings.profile": "GoogleStyle",
+				"java.format.settings.url": "eclipse-java-google-style.xml",
+				"java.debug.settings.hotCodeReplace": "auto",
+				"java.autobuild.enabled": true,
+				"files.trimTrailingWhitespace": true,
+				"java.saveActions.organizeImports": true,
+				"java.configuration.updateBuildConfiguration": "automatic",
+				"extensions.verifySignature": false
+			},
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"vscjava.vscode-lombok",
+				"vmware.vscode-boot-dev-pack",
+				"vscjava.vscode-spring-initializr",
+				"MS-CEINTL.vscode-language-pack-ja",
+				"PKief.material-icon-theme"
+			]
+		}
+	},
+	"remoteUser": "root"
+}
